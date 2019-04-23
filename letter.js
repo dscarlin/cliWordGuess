@@ -12,7 +12,7 @@ class Letter{
     }
     check(letter){
         if(letter.toUpperCase() == this.stringVal){
-            this.guessed = true;    
+            return this.guessed = true;  
         }
         // this.toString();  
     }

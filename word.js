@@ -2,7 +2,17 @@ const Letter = require('./letter.js');
 
 class Word{
     constructor(word){
-        this.letters = word.split("").map(letter => new Letter(letter));
+        
+            let letters = []
+            word.split("").forEach(function(letter){
+                if(letter != ' ')
+                    letter = new Letter(letter)
+                letters.push(letter)
+            });
+            this.letters = letters
+
+                
+        
     }
     print(){
         return this.letters.join(' ');
